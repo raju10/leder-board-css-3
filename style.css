@@ -7,15 +7,23 @@ main {
   margin: 0 auto;
   border: 1px solid black;
 }
-.section-title {
-  padding: 20px 0px;
+
+.top-players,
+.blogs {
+  display: grid;
+
+  grid-gap: 30px;
+  margin-top: 20px;
+  place-items: center;
 }
 .top-players {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
 }
-.single-players {
+.blogs {
+  grid-template-columns: repeat(2, 1fr);
+}
+.single-players,
+.sBlogs {
   display: flex;
   align-items: center;
 }
@@ -25,15 +33,20 @@ main {
 }
 @media (max-width: 992px) {
   .top-players {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 668px) {
   .top-players {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
   }
+  .sBlogs {
+    display: block;
+  }
+}
+.blogs-thumnell img {
+  width: 200px;
 }
