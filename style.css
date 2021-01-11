@@ -1,22 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,500&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #f3f0ff;
+  font-family: "Poppins", sans-serif;
+}
 main {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
-  border: 1px solid black;
+}
+
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
 }
 
 .top-players,
-.blogs {
+.blogs,
+.courses {
   display: grid;
 
   grid-gap: 30px;
   margin-top: 20px;
   place-items: center;
 }
-.top-players {
+.top-players,
+.courses {
   grid-template-columns: repeat(3, 1fr);
 }
 .blogs {
@@ -32,10 +45,12 @@ main {
   margin-right: 10px;
 }
 @media (max-width: 992px) {
-  .top-players {
+  .top-players,
+  .courses {
     grid-template-columns: repeat(2, 1fr);
   }
-  .blogs {
+  .blogs,
+  .courses {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -47,6 +62,24 @@ main {
     display: block;
   }
 }
+
+.sBoxCourses img {
+  width: 200px;
+  height: 120px;
+}
 .blogs-thumnell img {
   width: 200px;
+  margin-right: 20px;
+}
+.courseRatings .filled {
+  color: darkgoldenrod;
+}
+.courseRatings .unfilled {
+  color: lightgray;
+}
+.courseInfo {
+  display: flex;
+}
+.duration {
+  margin-left: 20px;
 }
